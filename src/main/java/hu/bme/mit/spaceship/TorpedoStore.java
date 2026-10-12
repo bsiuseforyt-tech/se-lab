@@ -28,7 +28,7 @@ public class TorpedoStore {
     }
   }
 
-  private Random generator = new Random();
+  private Random generator = new Random(); //Random példányt a metódusból kiviszed egy privát mezőbe. A konstruktorban, amikor a TorpedoStore létrejön, egyszer jön létre, és minden fire() hívás ugyanazt használja.
 
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
